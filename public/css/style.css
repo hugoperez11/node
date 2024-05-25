@@ -133,5 +133,62 @@ img {
     width: 100%;
   }
 }
+/*PREPARACION*/
+h2 {
+  font-size: 80px;
+  margin-left: 5%;
+  margin-top: 60px;
+}
+
+.preparation {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columna por defecto */
+  gap: 120px; /* Espacio entre los elementos */
+  padding-top: 50px;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.numbered-list-item {
+  counter-increment: list-counter;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px; /* Espacio para el número */
+  font-size: 50px;
+}
+
+.numbered-list-item::before {
+  content: counter(list-counter) ".";
+  position: absolute;
+  right: 100%; /* Mueve el número completamente a la izquierda del contenedor */
+  margin-right: 10px; /* Espacio adicional entre el número y el texto */
+  font-weight: bold;
+  background-color: chocolate;
+  font-size: 70px;
+}
+
+hr {
+  height: 5px; /* Altura de la línea (más gruesa) */
+  background-color: black;
+  margin-top: 150px;
+}
+
+/*footer*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+}
+
+.created {
+  font-size: 55px;
+  padding: 80px 80px 0 50px;
+}
+
+.icons img {
+  width: 80px;
+  height: 80px;
+  padding: 80px 50px 50px 50px;
+}
 
 /*# sourceMappingURL=style.css.map */
