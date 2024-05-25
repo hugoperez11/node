@@ -1,5 +1,137 @@
-body {
-  background-color: rgb(1, 1, 20);
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: chocolate;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding-left: 25px;
+  font-size: 110px;
+}
+
+img {
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+  /*seccion ingredients y time*/
+}
+
+.container {
+  display: flex;
+  font-size: 80px;
+}
+
+.ingredientes {
+  flex: 0 0 70%; /* Ocupa el 70% del ancho del contenedor, 0 grow 0 shrink 70% basis*/
+  background-color: chocolate;
+  padding-top: 100px;
+  padding-left: 20px;
+  margin-left: 5%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.time {
+  flex: 1; /* Ocupa el espacio restante del contenedor */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 70px;
+  width: 100%;
+  max-width: 300px;
+  margin: auto; /* Center the container horizontally */
+}
+
+.ingredientes ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding por defecto */
+  margin: 0; /* Elimina el margin por defecto */
+}
+
+.ingredientes li {
+  flex: 1 1 50%; /* Ocupa el 50% del ancho del contenedor */
+  box-sizing: border-box;
+  padding: 20px 0 0 0;
+}
+
+@media (max-width: 800px) {
+  .ingredientes li {
+    flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+  }
+}
+/*TIME SECCTION*/
+.timer {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.clock-row, .hourglass-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.clock-row img, .hourglass-row img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.buttons button {
+  padding: 10px;
+  font-size: 1em; /* Increase font size */
+  background-color: chocolate;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+.start-button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 40px;
+  border-radius: 35px;
+  background-color: chocolate;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: greenyellow;
+}
+
+@media (max-width: 800px) {
+  .buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .buttons button {
+    margin: 0;
+  }
+  .start-button {
+    align-self: center;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
